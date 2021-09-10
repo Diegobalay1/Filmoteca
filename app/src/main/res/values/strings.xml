@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">Filmoteca</string>
+    <string name="about_button_title_support">Obtener soporte</string>
+    <string name="about_button_title_website">Ir al sitio web</string>
+    <string name="about_button_title_back">Volver</string>
+    <string name="about_textview_created_by">Creada por Miguel Angel Lozano</string>
+    <string name="film_edit_prompt_genre">Género</string>
+    <string name="film_edit_prompt_format">Formato</string>
+    <string name="film_data_imdb_button_label">Ver en IMDB</string>
+    <string name="film_data_director_label">Director:</string>
+    <string name="film_data_year_label">Año:</string>
+    <string name="film_data_back_button_title">Volver a la principal</string>
+    <string name="film_data_edit_button_label">Editar</string>
 </resources>

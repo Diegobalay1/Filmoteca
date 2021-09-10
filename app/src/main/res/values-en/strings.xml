@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FilmLibrary</string>
+    <string name="about_button_title_support">Get support</string>
+    <string name="about_button_title_website">Go to website</string>
+    <string name="about_button_title_back">Go back</string>
+    <string name="about_textview_created_by">Created by Miguel Angel Lozano</string>
+    <string name="film_edit_prompt_genre">Genre</string>
+    <string name="film_edit_prompt_format">Format</string>
+    <string name="film_data_imdb_button_label">See in IMDB</string>
+    <string name="film_data_director_label">Director:</string>
+    <string name="film_data_year_label">Year:</string>
+    <string name="film_data_back_button_title">Back to main</string>
+    <string name="film_data_edit_button_label">Edit</string>
+</resources>

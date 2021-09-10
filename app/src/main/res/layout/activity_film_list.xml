@@ -6,13 +6,32 @@
     android:layout_height="match_parent"
     tools:context=".FilmListActivity">
 
-    <TextView
+    <Button
+        android:id="@+id/btnPeliculaB"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:text="Ver pelicula B"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnPeliculaA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ver pelicula A"
+        app:layout_constraintBottom_toTopOf="@+id/btnPeliculaB"
+        app:layout_constraintLeft_toLeftOf="@+id/btnPeliculaB"
+        app:layout_constraintRight_toRightOf="@+id/btnPeliculaB" />
+
+    <Button
+        android:id="@+id/btnAcercaDe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Acerca de"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnPeliculaB" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

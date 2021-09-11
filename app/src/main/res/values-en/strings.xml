@@ -4,7 +4,7 @@
     <string name="about_button_title_support">Get support</string>
     <string name="about_button_title_website">Go to website</string>
     <string name="about_button_title_back">Go back</string>
-    <string name="about_textview_created_by">Created by Miguel Angel Lozano</string>
+    <string name="about_textview_created_by">Created by Diego L. Ortiz</string>
     <string name="film_edit_prompt_genre">Genre</string>
     <string name="film_edit_prompt_format">Format</string>
     <string name="film_data_imdb_button_label">See in IMDB</string>

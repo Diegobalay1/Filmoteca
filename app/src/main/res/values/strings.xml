@@ -3,7 +3,7 @@
     <string name="about_button_title_support">Obtener soporte</string>
     <string name="about_button_title_website">Ir al sitio web</string>
     <string name="about_button_title_back">Volver</string>
-    <string name="about_textview_created_by">Creada por Miguel Angel Lozano</string>
+    <string name="about_textview_created_by">Creada por Diego L. Ortiz</string>
     <string name="film_edit_prompt_genre">Género</string>
     <string name="film_edit_prompt_format">Formato</string>
     <string name="film_data_imdb_button_label">Ver en IMDB</string>

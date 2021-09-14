@@ -36,9 +36,11 @@ class FilmListActivity : AppCompatActivity() {
             startActivity(intent)
         }*/
 
-        adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, peliculas.films)
+        //adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, peliculas.films)
+        adapter = FilmAdapterListView(this, R.layout.item_lenguaje, peliculas.films)
         listView = ListView(this)
         listView?.adapter = adapter
         setContentView(listView)
     }
+
 }

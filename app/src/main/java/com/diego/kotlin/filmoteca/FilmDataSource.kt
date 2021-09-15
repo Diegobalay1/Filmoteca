@@ -3,9 +3,10 @@ package com.diego.kotlin.filmoteca
 /**
  * Nos proporciona acceso al listado de películas
  */
-class FilmDataSource {
+object FilmDataSource {
     val films: MutableList<Film> = mutableListOf()
     var f = Film()
+
 
     init {
         f.title = "Mi Película"

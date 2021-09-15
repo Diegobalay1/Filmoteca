@@ -22,4 +22,7 @@ class FilmEditActivity : AppCompatActivity() {
             finish()
         }
     }
+    companion object {
+        const val EXTRA_FILM_INDEX = "EXTRA_FILM_INDEX"
+    }
 }

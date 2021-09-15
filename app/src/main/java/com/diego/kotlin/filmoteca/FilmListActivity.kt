@@ -11,7 +11,7 @@ import android.widget.ListView
 class FilmListActivity : AppCompatActivity() {
     var adapter : ListAdapter? = null
     var listView: ListView? = null
-    var peliculas = FilmDataSource()
+    //var peliculas = FilmDataSource()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,10 +37,18 @@ class FilmListActivity : AppCompatActivity() {
         }*/
 
         //adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, peliculas.films)
-        adapter = FilmAdapterListView(this, R.layout.item_lenguaje, peliculas.films)
+        //adapter = FilmAdapterListView(this, R.layout.item_lenguaje, peliculas.films)
+        adapter = FilmAdapterListView(this, R.layout.item_lenguaje, FilmDataSource.films)
         listView = ListView(this)
         listView?.adapter = adapter
         setContentView(listView)
+
+        listView?.setOnItemClickListener { parent, view, position, id ->
+            val intent = Intent(this@FilmListActivity, FilmDataActivity::class.java)
+            intent.putExtra(FilmDataActivity.EXTRA_FILM_INDEX, position)
+            startActivity(intent)
+        }
     }
+
 
 }

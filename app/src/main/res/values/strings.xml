@@ -11,4 +11,5 @@
     <string name="film_data_year_label">Año:</string>
     <string name="film_data_back_button_title">Volver a la principal</string>
     <string name="film_data_edit_button_label">Editar</string>
+    <string name="separador_coma">", "</string>
 </resources>

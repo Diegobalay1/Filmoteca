@@ -15,7 +15,7 @@ class FilmAdapterListView(context: Context?, resource: Int, objects: List<Film>?
         override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
             var view: View = convertView?:
                     LayoutInflater.from(this.context)
-                        .inflate(R.layout.item_lenguaje,parent, false)
+                        .inflate(R.layout.item_film,parent, false)
             val tvTitle = view.findViewById<TextView>(R.id.tvTitle)
             val tvDirector = view.findViewById<TextView>(R.id.tvDirector)
             val imgCaratula = view.findViewById<ImageView>(R.id.caratulaImg)

@@ -23,6 +23,7 @@ class FilmEditActivity : AppCompatActivity() {
         val btnCancelar = findViewById<Button>(R.id.btnEditCancel)
 
         btnGuardar.setOnClickListener {
+            saveFilmData()
             setResult(Activity.RESULT_OK)
             finish()
         }
@@ -54,6 +55,26 @@ class FilmEditActivity : AppCompatActivity() {
         spinnerFormato.setSelection(film.format, true)
         spinnerGenero.setSelection(film.genre, false)
         imgPoster.setImageResource(film.imageResId)
+    }
+
+    private fun saveFilmData() {
+        val etTitle = findViewById<EditText>(R.id.editTextTitle)
+        val etDirector = findViewById<TextView>(R.id.editTextDirector)
+        val etAnyo = findViewById<TextView>(R.id.editTextYear)
+        val etComentarios = findViewById<TextView>(R.id.editTextComments)
+        val etImdb = findViewById<TextView>(R.id.editTextURL)
+        val spinnerFormato = findViewById<Spinner>(R.id.spinnerFormat)
+        val spinnerGenero = findViewById<Spinner>(R.id.spinnerGenre)
+        val imgPoster = findViewById<ImageView>(R.id.imageViewCartel)
+
+        val film = FilmDataSource.films[filmIndex]
+        film.title = etTitle.text.toString()
+        film.director = etDirector.text.toString()
+        film.year = etAnyo.text.toString().toInt()
+        film.comments = etComentarios.text.toString()
+        film.imdbUrl = etImdb.text.toString()
+        film.genre = spinnerGenero.selectedItemPosition
+        film.format = spinnerFormato.selectedItemPosition
     }
 
 }

@@ -99,9 +99,14 @@ class FilmListActivity : AppCompatActivity() {
     }
 
     private fun nuevaPelicula() {
-        val f = Film()
+        /*val f = Film()
         FilmDataSource.films.add(f)
-        adapter?.notifyDataSetChanged()
+        adapter?.notifyDataSetChanged()*/
+        val f = Film()
+        f.title = "New Movie"
+        f.imageResId = R.mipmap.ic_launcher
+        FilmDataSource.films.add(f)
+        adapter?.notifyItemInserted(FilmDataSource.films.size - 1)
     }
 
 }

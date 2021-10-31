@@ -3,6 +3,8 @@ package com.diego.kotlin.filmoteca
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.widget.ListAdapter
 import android.widget.ListView
 import androidx.recyclerview.widget.DefaultItemAnimator
@@ -70,6 +72,37 @@ class FilmListActivity : AppCompatActivity() {
 
     }//end onCreate()
 
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        super.onCreateOptionsMenu(menu)
+        menuInflater.inflate(R.menu.film_list_menu, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        super.onOptionsItemSelected(item)
+        return when (item.itemId) {
+            R.id.miNuevaPelicula -> {
+                nuevaPelicula()
+                true
+            }
+            R.id.miAcercaDe -> {
+                abrirAcercaDe()
+                true
+            }
+            else -> false
+        }
+    }
+
+    private fun abrirAcercaDe() {
+        val intent = Intent(this, AboutActivity::class.java)
+        startActivity(intent)
+    }
+
+    private fun nuevaPelicula() {
+        val f = Film()
+        FilmDataSource.films.add(f)
+        adapter?.notifyDataSetChanged()
+    }
 
 }
 

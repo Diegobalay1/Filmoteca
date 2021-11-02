@@ -5,10 +5,12 @@ import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.MenuItem
 import android.view.View
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.core.app.NavUtils
 
 class FilmDataActivity : AppCompatActivity() {
     //var titulo = ""
@@ -54,6 +56,9 @@ class FilmDataActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setHomeAsUpIndicator(R.mipmap.ic_launcher)
+
         updateFilmData()
 
     }//end onCreate()
@@ -90,6 +95,18 @@ class FilmDataActivity : AppCompatActivity() {
             txtTitulo.text = titulo*/
             updateFilmData()
         }
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        super.onOptionsItemSelected(item)
+        when (item.itemId) {
+            android.R.id.home -> {
+                NavUtils.navigateUpTo(this, Intent(
+                    this, FilmListActivity::class.java))
+                return true
+            }
+        }
+        return false
     }
 
 }

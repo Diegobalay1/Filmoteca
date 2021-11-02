@@ -1,9 +1,12 @@
 package com.diego.kotlin.filmoteca
 
 import android.app.Activity
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.MenuItem
 import android.widget.*
+import androidx.core.app.NavUtils
 
 class FilmEditActivity : AppCompatActivity() {
 
@@ -31,6 +34,9 @@ class FilmEditActivity : AppCompatActivity() {
             setResult(Activity.RESULT_CANCELED)
             finish()
         }
+
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setHomeAsUpIndicator(R.mipmap.ic_launcher)
 
         loadFilmData()
     }
@@ -75,6 +81,19 @@ class FilmEditActivity : AppCompatActivity() {
         film.imdbUrl = etImdb.text.toString()
         film.genre = spinnerGenero.selectedItemPosition
         film.format = spinnerFormato.selectedItemPosition
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        super.onOptionsItemSelected(item)
+        when (item.itemId) {
+            android.R.id.home -> {
+                NavUtils.navigateUpTo(this, Intent(
+                    this, FilmListActivity::class.java)
+                )
+                return true
+            }
+        }
+        return false
     }
 
 }
